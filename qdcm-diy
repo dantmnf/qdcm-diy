@@ -1,0 +1,8 @@
+#!/bin/sh
+"""exec" "$(dirname "$0")/venv/bin/python" "$0" "$@"
+"""
+
+from qdcmdiy.__main__ import main
+
+if __name__ == "__main__":
+    main()

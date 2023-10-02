@@ -1,0 +1,7 @@
+/venv
+qdcm_calib_data_*
+/build
+/dist
+__pycache__
+*.cube
+*.cal
