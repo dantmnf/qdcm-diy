@@ -107,7 +107,7 @@ class QdcmModeXml:
             gc_feature.setAttribute("FeatureType", "8")
             gc_feature.setAttribute("Disable", "false")
             gc_feature.setAttribute("DataSize", "12300")
-            igc_feature.appendChild(self.dom_node.ownerDocument.createTextNode(lut3x1d_to_gc_xml(pipeline.degamma)))
+            igc_feature.appendChild(self.dom_node.ownerDocument.createTextNode(lut3x1d_to_gc_xml(pipeline.gamma)))
             self.dom_node.appendChild(gc_feature)
 
         if gamut_feature is not None:
@@ -122,7 +122,7 @@ class QdcmModeXml:
             gamut_feature.setAttribute("FeatureType", "3")
             gamut_feature.setAttribute("Disable", "false")
             gamut_feature.setAttribute("DataSize", "117928")
-            igc_feature.appendChild(self.dom_node.ownerDocument.createTextNode(lut3d_to_xml(pipeline.degamma)))
+            igc_feature.appendChild(self.dom_node.ownerDocument.createTextNode(lut3d_to_xml(pipeline.gamut)))
             self.dom_node.appendChild(gamut_feature)
 
         if mixer_gc_feature is not None:
