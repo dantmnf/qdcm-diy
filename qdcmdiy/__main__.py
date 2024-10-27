@@ -58,6 +58,10 @@ def main():
 
 
     args = parser.parse_args()
+
+    import warnings
+    warnings.simplefilter("ignore")
+
     # print(args)
     if args.command is None:
         parser.print_help()
